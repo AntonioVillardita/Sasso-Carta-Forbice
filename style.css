@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(60, 60, 60);
+  color: blanchedalmond;
+  font-size: 25px;
+  font-family: sans-serif;
+  text-align: center;
+}
+button {
+  font-size: 25px;
+  margin: 15px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+p {
+  font-size: 35px;
+  margin-top: 40px;
+}
+.dettaglio {
+  font-size: 20px;
+  color: #ddd;
+}
