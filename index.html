@@ -5,30 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sasso Carta Forbice</title>
 
-    <style>
-      body {
-        background-color: rgb(60, 60, 60);
-        color: blanchedalmond;
-        font-size: 25px;
-        font-family: sans-serif;
-        text-align: center;
-      }
-      button {
-        font-size: 25px;
-        margin: 15px;
-        padding: 10px 20px;
-        border-radius: 30px;
-        cursor: pointer;
-      }
-      p {
-        font-size: 35px;
-        margin-top: 40px;
-      }
-      .dettaglio {
-        font-size: 20px;
-        color: #ddd;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>Sasso Carta Forbice</h1>
@@ -40,40 +17,6 @@
     <p id="risultato">Chi vincerà?</p>
     <p id="dettaglio" class="dettaglio"></p>
 
-    <script>
-      let risultato = document.getElementById("risultato");
-      let dettaglio = document.getElementById("dettaglio");
-
-      const listaCpu = ["sasso", "carta", "forbice"];
-
-      const regole = {
-        sasso: "forbice",
-        carta: "sasso",
-        forbice: "carta",
-      };
-
-      function generaMossaComputer() {
-        const indiceRandom = Math.floor(Math.random() * listaCpu.length);
-        return listaCpu[indiceRandom];
-      }
-
-      function gioca(sceltaGiocatore) {
-        const sceltaComputer = generaMossaComputer();
-
-        dettaglio.innerText = `Tu: ${sceltaGiocatore.toUpperCase()} vs Computer: ${sceltaComputer.toUpperCase()}`;
-
-        if (sceltaGiocatore === sceltaComputer) {
-          risultato.innerText = "Pareggio! 😐";
-          return;
-        }
-
-        if (regole[sceltaGiocatore] === sceltaComputer) {
-          risultato.innerText = "Hai vinto! 🎉";
-          return;
-        }
-
-        risultato.innerText = "Hai perso! 😞";
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
